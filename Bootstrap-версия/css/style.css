@@ -1,0 +1,581 @@
+/* =================================== */
+/* 1. БАЗОВЫЕ НАСТРОЙКИ И ПЕРЕМЕННЫЕ   */
+/* =================================== */
+
+:root {
+    --abc-red: #D91B1B;
+    --abc-dark: #1F2226;
+    --abc-gray: #7F8C99;
+    --abc-light: #F8FAFC;
+    --abc-border: #EAEAEA;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--abc-dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ======================= */
+/* 2. HEADER               */
+/* ======================= */
+
+:root {
+    --abc-red: #d91d1d;
+    --abc-dark: #222222;
+}
+
+.custom-header {
+    background: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.menu-links a, .catalog-links a {
+    transition: color 0.2s ease;
+}
+
+.menu-links a:hover, .catalog-links a:hover {
+    color: var(--abc-red) !important;
+}
+
+.border-danger-custom {
+    border-bottom: 2px solid var(--abc-red);
+}
+
+.header-solid-action-btn {
+    background: var(--abc-red) !important;
+    border: none !important;
+    transition: background-color 0.2s ease;
+}
+
+.header-solid-action-btn:hover {
+    background: #b61414 !important;
+}
+
+.util-counter {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    font-weight: bold;
+
+    position: absolute;
+    top: -6px;
+    right: -8px;
+
+    background: var(--abc-red);
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================= */
+/* 3. HERO                 */
+/* ======================= */
+
+.hero-banner {
+    min-height: 450px;
+    background-image: url('../img/Frame.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.custom-form-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.tracking-tight {
+    letter-spacing: -0.5px;
+}
+
+.py-1-5 {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+.custom-input {
+    min-height: 48px !important;
+    background-color: #f4f5f7 !important;
+    border: 1px solid #e4e7ee !important;
+    border-radius: 6px !important;
+    font-size: 14px;
+    color: #333;
+}
+
+.custom-input:focus {
+    background-color: #fff !important;
+    border-color: var(--abc-red) !important;
+    box-shadow: 0 0 0 0.25rem rgba(217, 29, 29, 0.15) !important;
+}
+
+/* Кнопка отправки формы */
+.custom-submit-btn {
+    min-height: 48px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-radius: 6px !important;
+    background-color: var(--abc-red) !important;
+    border: none !important;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.custom-submit-btn:hover {
+    background-color: #b61414 !important;
+}
+
+.custom-submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Мелкий текст под инпутами */
+.custom-legal-text {
+    font-size: 10px !important;
+    line-height: 1.2;
+    display: block;
+    color: #888888 !important;
+}
+
+/* ======================= */
+/* 4. КАТАЛОГ              */
+/* ======================= */
+
+.section-title {
+    color: var(--abc-dark);
+    font-weight: 800;
+}
+
+.detailed-cars-section img {
+    transition: .3s ease;
+}
+
+.detailed-cars-section img:hover {
+    transform: translateY(-4px);
+}
+
+/* Общие параметры карточки */
+.custom-car-card {
+    border-radius: 20px !important; /* Чуть скруглили углы для соответствия макету */
+    background-color: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+.car-preview-img {
+    max-height: 135px;
+    object-fit: contain;
+}
+
+.favorite-block {
+    width: 32px;
+}
+
+.favorite-btn i {
+    transition: color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.favorite-btn:hover i {
+    color: #e30613 !important;
+    transform: scale(1.1);
+}
+
+.custom-dots .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.dot-white      { background-color: #ffffff; border: 1px solid #e0e0e0 !important; }
+.dot-light-grey { background-color: #e0e0e0; }
+.dot-red        { background-color: #e30613; }
+.dot-blue       { background-color: #3b5998; }
+.dot-brown      { background-color: #654321; }
+.dot-green      { background-color: #4ca64c; }
+
+.custom-checkbox-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-real-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-box {
+    width: 16px;
+    height: 16px;
+    background-color: #cccccc;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.custom-real-checkbox:checked + .checkbox-box {
+    background-color: #e30613;
+}
+
+.custom-real-checkbox:checked + .checkbox-box::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.catalog-specs .spec-discount {
+    color: #e30613;
+    font-weight: 700;
+    font-size: 13px;
+    min-width: 38px;
+}
+
+.gift-circle-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+.gift-circle-icon.icon-dark-grey { background-color: #2b2e34; }
+.gift-circle-icon.icon-red       { background-color: #e30613; }
+.gift-circle-icon.icon-grey      { background-color: #8a8e94; }
+
+.combo-btn-group {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 375px;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+.combo-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    text-decoration: none;
+    height: 52px;
+    line-height: 1.2;
+    transition: opacity 0.15s ease;
+}
+
+.combo-btn:hover {
+    opacity: 0.85;
+}
+
+.btn-combo-red {
+    background-color: #cc0000;
+    width: 36%;
+    clip-path: polygon(0% 0%, 86% 0%, 100% 50%, 86% 100%, 0% 100%);
+    padding-right: 14px;
+}
+
+.btn-combo-dark {
+    background-color: #1f2226;
+    width: 36%;
+    margin-left: -5%; /* Наложение на предыдущую */
+    clip-path: polygon(14% 0%, 86% 0%, 100% 50%, 86% 100%, 14% 100%, 0% 50%);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn-combo-grey {
+    background-color: #747474;
+    width: 33%;
+    margin-left: -5%; /* Наложение на предыдущую */
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
+    padding-left: 14px;
+}
+
+@media (max-width: 991px) {
+    .combo-btn-group {
+        margin: 20px auto 0;
+    }
+}
+
+/* ================== */
+/* 5. БАННЕР TRADE-IN */
+/* ================== */
+
+.trade-in-banner {
+    background: #e30613 url('../img/trade-in.png') center center / cover no-repeat;
+    border-radius: 16px !important;
+    min-height: 160px;
+    height: 160px; 
+    position: relative;
+    box-shadow: 0 4px 20px rgba(227, 6, 19, 0.15);
+    display: flex;
+    align-items: center;
+}
+
+.trade-banner-title {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+
+.text-border-fill {
+    color: transparent !important;
+    -webkit-text-stroke: 1px #ffffff;
+    font-weight: 900;
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.trade-form-wrapper .form-control,
+.trade-form-wrapper .btn {
+    height: 46px !important;
+}
+
+.trade-input {
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0 20px !important;
+    font-size: 14px !important;
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    flex-grow: 1;
+}
+
+.trade-input::placeholder {
+    color: #999999;
+}
+
+.trade-submit {
+    background-color: #1f2226 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 11px !important;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.trade-submit:hover {
+    background-color: #000000 !important;
+}
+
+.pseudo-privacy a {
+    transition: color 0.2s;
+}
+.pseudo-privacy a:hover {
+    color: #ffffff !important;
+}
+
+@media (max-width: 991px) {
+    .trade-in-banner {
+        min-height: auto;
+        height: auto; 
+        padding: 10px 0;
+    }
+    .text-border-fill {
+        font-size: 24px;
+    }
+}
+
+/* ======================== */
+/* 6. ПОДВАЛ САЙТА (FOOTER) */
+/* ======================== */
+
+.site-footer {
+    background: #1f1f1f;
+    color: #b5b5b5;
+}
+
+/* ----------------------- */
+/* 6.1 ВЕРХНЕЕ МЕНЮ ФУТЕРА */
+/* ----------------------- */
+
+.footer-top-nav {
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-top-nav a {
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+.footer-top-nav a:hover {
+    color: var(--abc-red);
+}
+
+/* ------------------------- */
+/* 6.2 ОСНОВНАЯ ЧАСТЬ ФУТЕРА */
+/* ------------------------- */
+
+.footer-main {
+    padding: 4rem 0;
+}
+
+.footer-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-title-row h2,
+.credit-column h2,
+.contacts-column h2 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-title-row a {
+    color: #707070;
+    font-size: .9rem;
+}
+
+/* ----------------- */
+/* 6.3 КАТАЛОГ МАРОК */
+/* ----------------- */
+
+.brands-grid ul {
+    padding: 0;
+    margin: 0;
+}
+
+.brands-grid li {
+    margin-bottom: .75rem;
+}
+
+.brands-grid a {
+    color: #8f8f8f;
+    font-size: .9rem;
+}
+
+.brands-grid a:hover {
+    color: #fff;
+}
+
+/* ----------------------- */
+/* 6.4 КРЕДИТНЫЕ ПРОГРАММЫ */
+/* ----------------------- */
+
+.credit-column h2,
+.contacts-column h2 {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.credit-column h2::after,
+.contacts-column h2::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: var(--abc-red);
+    margin-top: .75rem;
+}
+
+.credit-column ul {
+    padding: 0;
+    margin: 0;
+}
+
+.credit-column li {
+    margin-bottom: 1rem;
+}
+
+.credit-column a {
+    color: #8f8f8f;
+}
+
+.credit-column a:hover {
+    color: #fff;
+}
+
+/* ------------------------- */
+/* 6.5 КОНТАКТНАЯ ИНФОРМАЦИЯ */
+/* ------------------------- */
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a {
+    color: var(--abc-red);
+}
+
+.footer-city {
+    width: 100%;
+    background: #343434;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem 1rem;
+}
+
+/* ------------------------ */
+/* 6.6 НИЖНЯЯ ПАНЕЛЬ ФУТЕРА */
+/* ------------------------ */
+
+.footer-bottom {
+    background: #181818;
+    padding: 2rem 0;
+}
+
+.footer-copy {
+    color: #d5d5d5;
+    font-size: .9rem;
+}
+
+.footer-legal {
+    color: #5f5f5f;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.yandex-rating {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
